@@ -2,4 +2,4 @@
 
 - [Interface](./_Interface.cs)
 - [Nullable](./_Nullable.cs)
-- [Records](./_Records.cs)
+- [Record](./_Record.cs)

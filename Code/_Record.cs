@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace advanced_csharp
 {
-    internal class _Records
+    internal class _Record
     {
         public static void Main(string[] args)
         {

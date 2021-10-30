@@ -60,8 +60,10 @@ namespace advanced_csharp
             var sideC = new { Name = "Some.." };
 
             // Equals e GetHashCode são definidos em tipo anonimos.
-            Console.WriteLine((sideA.Equals(sideB))); // São iguais se todas propriedades são iguais.
-            Console.WriteLine((sideA.Equals(sideC)));
+            // São iguais se todas propriedades são iguais.
+            Console.WriteLine((sideA.Equals(sideB))); // Resultado = True
+            Console.WriteLine((sideA.Equals(sideC))); // Resultado = False
+            Console.WriteLine((sideA == sideB)); // Resultado = False (não tem overloading do operator ==)
         }
     }
 

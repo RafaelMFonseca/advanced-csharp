@@ -1,5 +1,7 @@
 # Advanced C#
 
-- [Interface](./_Interface.cs)
-- [Nullable](./_Nullable.cs)
-- [Record](./_Record.cs)
+- [Interface](./Code/_Interface.cs)
+- [Nullable](./Code/_Nullable.cs)
+- [Record](./Code/_Record.cs)
+- [Generic](./Code/_Generic.cs)
+- [Anonymous Types](./Code/_AnonymousTypes.cs)

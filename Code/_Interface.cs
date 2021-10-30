@@ -31,6 +31,9 @@ namespace advanced_csharp
 
     public struct Database : IStore { }
 
+    // So conseguimos chamar default method implementation e métodos privates/protected
+    // com o tipo da interface.
+
     public interface IUser
     {
         string Name { get; set; } // properties

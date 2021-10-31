@@ -53,6 +53,7 @@ namespace advanced_csharp
             object tipoAnonimo = new { Name = "Teste" };
             var nameTipoAnonimo = tipoAnonimo?.GetType()?.GetProperty("Name")?.GetValue(tipoAnonimo);
 
+            Console.WriteLine(tipoAnonimo?.GetType()?.ToString()); // Resultado = <>f__AnonymousType1`1[System.String]
             Console.WriteLine(nameTipoAnonimo);
 
             var sideA = new { Name = "Some name" };

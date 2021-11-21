@@ -85,6 +85,9 @@ namespace advanced_csharp
 
     // 'record' imutáveis = úteis para manter o hashcode o mesmo na hashtable.
 
+    // 'record class' => suporta herança
+    // 'record struct' => não suporta herança
+
     // Você pode definir suas propriedades também
     public record class Carro(string Nome)
     {

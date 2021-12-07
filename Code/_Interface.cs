@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace advanced_csharp
 {
+    // Interfaces são references types
     public class _Interface
     {
         public static void Main(string[] args)

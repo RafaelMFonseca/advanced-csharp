@@ -50,11 +50,29 @@ namespace advanced_csharp
 
         // Override do método virtual ToString() do System.Object.
         public override string ToString() => base.ToString();
+
+        protected virtual void DoSomething()
+        {
+            Console.WriteLine("BaseClass.DoSomething()");
+        }
+
+        public void DoSomethingPublic()
+        {
+            this.DoSomething();
+        }
     }
 
-    public class DirivedClass : BaseClass
+    public class DerivedClass : BaseClass
     {
+        public DerivedClass()
+        {
+            this.DoSomething();
+        }
 
+        public new void DoSomething()
+        {
+            Console.WriteLine("DerivedClass.DoSomething()");
+        }
     }
 
     public class BaseClass2
@@ -94,7 +112,11 @@ namespace advanced_csharp
     {
         public static void Main(string[] args)
         {
+            DerivedClass derivedClass = new DerivedClass(); // DerivedClass.DoSomething()
+            derivedClass.DoSomethingPublic(); // BaseClass.DoSomething()
 
+            BaseClass baseClass = new DerivedClass(); // DerivedClass.DoSomething()
+            baseClass.DoSomethingPublic(); // BaseClass.DoSomething()
         }
     }
 }

@@ -23,7 +23,7 @@ namespace advanced_csharp
     // Genéricos ajuda no type safety(segurança de tipos/tipagem), reutilização de código e performance.
     // Genéricos evita boxing e unboxing.
     // Boxing => um mecanismo para converter explicitamente um tipo por valor para um tipo por referência armazenando a variável em System.Object.
-    // Unboing => é o processo de converter de volta o tipo por referência no tipo por valor.
+    // Unboxing => é o processo de converter de volta o tipo por referência no tipo por valor.
     // Boxing/Unboxing => degradam o desempenho.
     public class Bindable<T>
     {

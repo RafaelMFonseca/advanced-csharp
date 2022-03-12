@@ -18,6 +18,10 @@ namespace advanced_csharp
 
     // Herança = ganha todos membros da classe base, exceto construtores e finalizadores.
 
+    // No código, pode executar um método da classe base e causar a versão da classe derivada 
+    // para ser executada. (com virtual e override).
+
+    // override = faz o método da classe de runtime ser chamada, e não do tipo da variável
     public static class Util
     {
         public static void DoSomething() { }
@@ -85,6 +89,9 @@ namespace advanced_csharp
         }
 
         // Posso dar um override em um método virtual em classes derivadas.
+        // Se tirar o virtual aqui, dá erro
+        // "A derived class can override a base class member only if the base class member
+        // is declared as virtual or abstract. "
         public virtual void DoSomething() { } 
     }
 
@@ -94,7 +101,8 @@ namespace advanced_csharp
         {
         }
 
-        public override void DoSomething() { }
+        // A derived class can stop virtual inheritance by declaring an override as sealed. 
+        public sealed override void DoSomething() { }
     }
 
     public class DerivedClass3 : BaseClass2
@@ -106,6 +114,22 @@ namespace advanced_csharp
         // indica explicitamento que o membro não deve ser override da classe base
         // new não é necessário, mas será gerado um warning pelo compilador
         public new void DoSomething() { }
+    }
+
+    public class DerivedClass4 : DerivedClass2
+    {
+        public DerivedClass4() : base()
+        {
+        }
+
+        // public override void DoSomething() { }  ERRO!
+
+        // Ainda posso usar o 'new' em metodo sealed porque só esconde a impl. do pai
+        // É como se fosse um método/impl. nova
+        public new void DoSomething() // OK!
+        {
+            base.DoSomething(); /* Chama método do pai */
+        }
     }
 
     public class _Classz

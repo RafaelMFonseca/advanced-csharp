@@ -43,7 +43,7 @@ namespace advanced_csharp
                 Console.WriteLine(city.Name);
             }
 
-            // tipos anonimos são classes dertivadas de object, não pode fazer cast pra qualquer
+            // tipos anonimos são classes derivadas de object, não pode fazer cast pra qualquer
             // tipo, exceto object.
 
             // Usar object para tipos anonimos fere o propósito de tipagem forte, se você

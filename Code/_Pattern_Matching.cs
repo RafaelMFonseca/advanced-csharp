@@ -82,5 +82,19 @@ public class _Pattern_Matching
         {
             Console.WriteLine("Caiu na exception pq não cobre todos os casos.");
         }
+
+        Person person = new("Mike", 33);
+        Console.WriteLine(person switch {
+            (_, Age: < 5) => "Less than .", /**  Deconstruct **/
+            { Name: "Mike" } => "Hello!",
+            null => throw new ArgumentNullException(nameof(person), "Can't be null."),
+            var someObject => "",
+            // _ => ""
+        });
+
+        _ = args ?? throw new Exception("Arg is null"); /* discard: podemos usar pra indicar uma variável ignorada */
+        /* _ é considerado uma variável válida */
     }
+
+    public record Person(string Name, int Age);
 }
